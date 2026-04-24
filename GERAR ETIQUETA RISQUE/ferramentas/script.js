@@ -199,7 +199,7 @@ ${zplNome}
     `;
   });
 
-  fetch("http://172.24.120.148:9100", {
+  fetch("***IP***", {
     method: "POST",
     body: zplCompleto,
   })
