@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Impressão de Etiquetas Risque</title>
+    <link rel="stylesheet" href="ferramentas/style.css" />
+    <link
+      rel="shortcut icon"
+      href="ferramentas/img/coty.png"
+      type="image/x-icon"
+    />
+    <script src="ferramentas/base_dados.js"></script>
+  </head>
+  <body>
+    <section class="container">
+      <div class="fcRisque">
+        <h2>Gerador de Etiquetas Risque</h2>
+
+        <button
+          class="ButtonBioC"
+          onclick="window.location.href = 'ferramentas/EtiquetaBiocolor.html'"
+        >
+          <span>Ir para App Biocolor</span>
+        </button>
+
+        <div class="form">
+          <input type="text" id="material" placeholder="Código do Material" />
+          <input type="text" id="nome" placeholder="Nome" />
+          <input type="text" id="lote" placeholder="Lote" />
+          <input type="text" id="validade" placeholder="Validade (MM/AA)" />
+          <input type="text" id="hora" placeholder="Hora (HH:MM)" />
+          <input
+            type="number"
+            id="quantidade"
+            placeholder="Qtd"
+            min="1"
+            value="1"
+          />
+          <button onclick="adicionarFila()">Adicionar à Fila</button>
+          <button onclick="imprimirFila()">Imprimir Todas</button>
+          <button onclick="apagarFila()">Apagar Tudo</button>
+        </div>
+      </div>
+    </section>
+
+    <h3>Fila de Impressão</h3>
+    <div id="fila"></div>
+
+    <script src="ferramentas/script.js"></script>
+  </body>
+</html>
